@@ -1,0 +1,34 @@
+# Folder Virtual Environment (Paling Penting!)
+venv/
+/venv/
+*.venv
+
+# File cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# File-file gambar & video (untuk testing, tidak perlu di repo)
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.gif
+*.webp
+*.mp4
+
+# File konfigurasi editor & IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# File sistem operasi
+.DS_Store
+Thumbs.db
+
+# File log
+*.log
+
+# File catatan (jika ada)
+notes.txt
