@@ -3,7 +3,7 @@ import mediapipe as mp
 import math
 import numpy as np
 
-# --- BARU: Impor library untuk kontrol volume ---
+# --- Impor library untuk kontrol volume ---
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from ctypes import cast, POINTER
@@ -17,12 +17,11 @@ hands = mp_hands.Hands(static_image_mode=False,
                        min_tracking_confidence=0.5)
 mp_drawing = mp.solutions.drawing_utils
 
-# --- BARU & DIPERBAIKI: Setup Kontrol Volume Sistem ---
+# --- Setup Kontrol Volume Sistem ---
 # 1. Dapatkan perangkat speaker default
 devices = AudioUtilities.GetSpeakers()
 
 # 2. Dapatkan antarmuka (interface) EndpointVolume dari perangkat
-#    Ini adalah cara yang benar, BUKAN memanggil .Activate()
 volume_interface = devices.EndpointVolume
 
 # 3. "Cast" (ubah) antarmuka COM ini menjadi tipe yang bisa dipahami Python
